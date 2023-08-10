@@ -2,12 +2,16 @@ import Head from "next/head";
 import React, { ReactNode, FC } from "react";
 import { NavbarLayout } from "../ui";
 
+import { BlobsBackground } from "../ui/background/BlobsBackground";
+
+
 interface Props {
   children?: ReactNode;
   title?: string;
 }
 
 export const Layout: FC<Props> = ({ children, title='PokemonApp' }) => {
+
   return (
     <>
       <Head>
@@ -16,6 +20,9 @@ export const Layout: FC<Props> = ({ children, title='PokemonApp' }) => {
         <meta name="description" content={`Información del pokemon ${title}`} />
         <meta name="keywords" content={`${title}, pokemon, pokedex`} />
       </Head>
+
+      <BlobsBackground />
+
       <NavbarLayout />
       <main className="px-10">{children}</main>
     </>

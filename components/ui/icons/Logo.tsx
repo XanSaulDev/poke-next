@@ -3,7 +3,7 @@ import React from 'react'
 export const Logo = (props:any) => {
   return (
 
-    <svg id="Layer_1"  width="2em" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1324.2 1318.92" {...props}>
+    <svg id="Layer_1"  width="1.6em" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1324.2 1318.92" {...props}>
     <defs>
     </defs>
     <title>3</title>

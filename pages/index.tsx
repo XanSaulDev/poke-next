@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layouts'
 import { CardPokemon } from '@/components/ui'
-import {Button} from '@nextui-org/react'
+
 
 
 
@@ -13,6 +13,7 @@ export default function Home() {
         <CardPokemon />
         <CardPokemon />
         <CardPokemon />
+
       </div>
     </Layout>
 

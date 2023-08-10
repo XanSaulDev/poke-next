@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <NextUIProvider>
-       <NextThemesProvider attribute="class" defaultTheme='dark'>
+       <NextThemesProvider attribute="class" defaultTheme='custom-dark'>
           <Component {...pageProps} />
        </NextThemesProvider>
     </NextUIProvider>

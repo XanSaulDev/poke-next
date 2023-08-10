@@ -2,9 +2,10 @@ import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
 import { Logo } from "../icons";
 import { SwitchDarkMode } from './SwitchDarkMode'
+import { useTheme } from "next-themes";
 
 export function NavbarLayout() {
-
+  const {setTheme} = useTheme()
   return (
     <Navbar isBordered className="mb-10 " maxWidth="full">
       <NavbarMenu>

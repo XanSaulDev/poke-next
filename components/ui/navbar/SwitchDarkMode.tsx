@@ -4,9 +4,10 @@ import { SunIcon, MoonIcon } from "../icons";
 import { useTheme } from "next-themes";
 
 export function SwitchDarkMode() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme, themes } = useTheme();
   const handleOnChange = (isSelected: boolean) => {
     if (isSelected) {
+
       setTheme("dark");
       return;
     }
