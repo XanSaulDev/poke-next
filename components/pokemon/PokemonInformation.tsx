@@ -14,7 +14,7 @@ export const PokemonInformation: FC<Props> = ({ pokemon }) => {
     <Card className="md:w-9/12 w-full relative">
       <Button
         isIconOnly
-        className="absolute right-3 top-3 z-50"
+        className="absolute right-3 top-3 z-10"
         onClick={handleFavorite}
       >
         <HeartIcon filled={isInFavorites} fill="red" />
