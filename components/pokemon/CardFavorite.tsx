@@ -4,9 +4,11 @@ import React, { FC } from "react";
 
 interface Props {
   id: number;
-}
+  className?: string;
+  isPressable?: boolean;
+} 
 
-const CardFavorite: FC<Props> = ({ id }) => {
+const CardFavorite: FC<Props> = ({ id, className, isPressable=false }) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(`/pokemon/${id}`);
@@ -14,8 +16,8 @@ const CardFavorite: FC<Props> = ({ id }) => {
   return (
     <Card
       key={id}
-      className="hover:-translate-y-1.5 cursor-pointer"
-      isPressable
+      className={className}
+      isPressable={isPressable}
       onClick={handleClick}
     >
       <CardBody>
