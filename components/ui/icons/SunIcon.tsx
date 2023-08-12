@@ -7,7 +7,7 @@ export const SunIcon = (props:any) => (
     height="1em"
     role="presentation"
     viewBox="0 0 24 24"
-    width="1em"
+    width="5em"
     {...props}
   >
     <g fill="currentColor">

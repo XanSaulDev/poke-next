@@ -1,2 +1,2 @@
 export * from './navbar';
-export * from './CardPokemon';
+export * from '../pokemon/CardPokemon';

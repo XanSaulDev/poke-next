@@ -17,13 +17,17 @@ module.exports = {
     plugins: [nextui({
       themes: {
         dark: {
-
+          // 50: "#100F22" background: '#020111'
           colors: {
-            background: '#1E1E1E'
+            background: '#151515',
+            secondary: {
+              50: "#1C1C1C",
+              DEFAULT: "#1C1C1C",
+              foreground: "#000000",
+            },
           }, // dark theme colors
         },
 
-        
       }
     })]
   }
