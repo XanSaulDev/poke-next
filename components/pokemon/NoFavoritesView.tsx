@@ -4,7 +4,9 @@ import React from "react";
 const NoFavoritesView = () => {
   return (
     <div className=" flex justify-center items-center flex-col gap-5 ">
-      <h3 className="text-4xl font-bold text-gray-600 text-center">No tienes favoritos</h3>
+      <h3 className="text-4xl font-bold text-gray-600 text-center">
+        No tienes favoritos
+      </h3>
       <Image
         alt="PokeImagen"
         width={150}

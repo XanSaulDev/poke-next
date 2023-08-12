@@ -3,17 +3,14 @@ import React, { ReactNode, FC } from "react";
 import { NavbarLayout } from "../ui";
 import { BlobsBackground } from "../ui/background/BlobsBackground";
 
-
-
-
 interface Props {
   children?: ReactNode;
   title?: string;
 }
 
-export const Layout: FC<Props> = ({ children, title='PokemonApp' }) => {
+const origin = typeof window === "undefined" ? "" : window.location.origin;
 
-
+export const Layout: FC<Props> = ({ children, title = "PokemonApp" }) => {
   return (
     <>
       <Head>
@@ -21,6 +18,15 @@ export const Layout: FC<Props> = ({ children, title='PokemonApp' }) => {
         <meta name="author" content="Saul Huerta" />
         <meta name="description" content={`Información del pokemon ${title}`} />
         <meta name="keywords" content={`${title}, pokemon, pokedex`} />
+        <meta
+          property="og:title"
+          content={`Información sobre el pokémon ${title}`}
+        />
+        <meta
+          property="og:description"
+          content={`Esta es la página sobre ${title}`}
+        />
+        <meta property="og:image" content={`${origin}/images/banner.png`} />
       </Head>
 
       <NavbarLayout />

@@ -2,6 +2,7 @@ import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import { Pokemon, PokemonListResponse } from "@/interfaces";
 import { pokeApi } from "@/api";
 import { PokemonView } from "@/components/pokemon";
+import { getPokemonInfo } from "@/utils";
 
 interface Props {
   pokemon: Pokemon;
@@ -28,10 +29,10 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { name } = params as { name: string };
-  const { data } = await pokeApi.get<Pokemon>(`/pokemon/${name}/`);
+
   return {
     props: {
-      pokemon: data,
+      pokemon: await getPokemonInfo(name),
     },
   };
 };

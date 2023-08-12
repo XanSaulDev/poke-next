@@ -1,18 +1,17 @@
 import React, { FC } from "react";
 
 interface Props {
-    fill?: string;
-    filled?: boolean;
-    size?: number;
-    height?: number;
-    width?: number;
-    label?: string;
-    className?: string; 
+  fill?: string;
+  filled?: boolean;
+  size?: number;
+  height?: number;
+  width?: number;
+  label?: string;
+  className?: string;
 }
 
-
 export const HeartIcon: FC<Props> = ({
-  fill = 'currentColor',
+  fill = "currentColor",
   filled,
   size,
   height,
@@ -27,7 +26,7 @@ export const HeartIcon: FC<Props> = ({
       width={size || width || 24}
       height={size || height || 24}
       viewBox="0 0 24 24"
-      fill={filled ? fill : 'none'}
+      fill={filled ? fill : "none"}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -41,4 +40,3 @@ export const HeartIcon: FC<Props> = ({
     </svg>
   );
 };
-

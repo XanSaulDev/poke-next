@@ -6,9 +6,13 @@ interface Props {
   id: number;
   className?: string;
   isPressable?: boolean;
-} 
+}
 
-const CardFavorite: FC<Props> = ({ id, className, isPressable=false }) => {
+export const CardPokemonImage: FC<Props> = ({
+  id,
+  className,
+  isPressable = false,
+}) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(`/pokemon/${id}`);
@@ -26,11 +30,11 @@ const CardFavorite: FC<Props> = ({ id, className, isPressable=false }) => {
           width={"100%"}
           height={"100%"}
           alt="Pokemon"
-          className="py-5 px-10"
+          className="py-5 px-10 object-cover"
         />
       </CardBody>
     </Card>
   );
 };
 
-export default CardFavorite;
+export default CardPokemonImage;
