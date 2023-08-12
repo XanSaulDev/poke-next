@@ -6,12 +6,14 @@ interface Props {
   id: number;
   className?: string;
   isPressable?: boolean;
+  imageClassName?: string;
 }
 
 export const CardPokemonImage: FC<Props> = ({
   id,
   className,
   isPressable = false,
+  imageClassName,
 }) => {
   const router = useRouter();
   const handleClick = () => {
@@ -24,13 +26,13 @@ export const CardPokemonImage: FC<Props> = ({
       isPressable={isPressable}
       onClick={handleClick}
     >
-      <CardBody>
+      <CardBody className="flex justify-center items-center ">
         <Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
-          width={"100%"}
-          height={"100%"}
           alt="Pokemon"
-          className="py-5 px-10 object-cover"
+          radius="lg"
+          width="100%"
+          className={`w-full object-cover h-[140px] ${imageClassName}`}
         />
       </CardBody>
     </Card>

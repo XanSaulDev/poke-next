@@ -19,11 +19,11 @@ export const PokemonInformation: FC<Props> = ({ pokemon }) => {
       >
         <HeartIcon filled={isInFavorites} fill="red" />
       </Button>
-      <CardBody className="px-9  justify-center">
+      <CardBody className="px-9  justify-center capitalize ">
         <div className="grid md:grid-cols-2 md:justify-normal justify-stretch w-full">
           <div>
             <h1 className="text-4xl font-bold block mb-3">
-              {pokemon.name.toUpperCase()}
+              {pokemon.name}
             </h1>
             <h4 className="font-bold mb-1">Types</h4>
             <div className="flex gap-2 text-sm">

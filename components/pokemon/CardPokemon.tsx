@@ -28,7 +28,7 @@ export const CardPokemon: FC<Props> = ({ pokemon }) => {
         />
       </CardBody>
       <CardHeader className="my-1 flex-col items-center" onClick={onClick}>
-        <h4 className="font-semibold text-large">{pokemon.name}</h4>
+        <h4 className="font-semibold text-large capitalize ">{pokemon.name}</h4>
       </CardHeader>
     </Card>
   );

@@ -12,7 +12,7 @@ export const FavoritesPokemons: FC<Props> = ({ pokemons }) => {
         <CardPokemonImage
           key={id}
           id={id}
-          className="hover:-translate-y-1.5 cursor-pointer"
+          className="hover:-translate-y-1.5 cursor-pointer h-64"
           isPressable
         />
       ))}
